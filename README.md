@@ -15,4 +15,4 @@ library(UCMRS)
 UCMRS(nSim=50)
 ```
 
-<img src="ucmrs.png" width="500">
+
