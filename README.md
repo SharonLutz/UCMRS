@@ -11,7 +11,7 @@ devtools::install_github("SharonLutz/UCMRS")
 ## Input
 For n subjects (input n), we generated the SNP g and the unmeasured confounder u from normal distributions with user specified means and variances (input gMu,gVar,uMu,uVar). x and y are generated such that
 
-E\[X \] = &alpha;<sub>1</sub> +  &beta;<sub>g</sub> g +  &beta;<sub>U1</sub> U;<sub>1</sub> + &epsilon;<sub>1</sub>
+E\[X \] = &alpha;<sub>1</sub> +  &beta;<sub>g</sub> g +  &beta;<sub>U1</sub> U<sub>1</sub> + &epsilon;<sub>1</sub>
 
 E\[Y \] = &alpha;<sub>2</sub> +  &beta;<sub>X</sub> X<sub>true</sub> + &Sigma; &beta;<sub>G</sub> G
 
