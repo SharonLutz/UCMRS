@@ -9,6 +9,18 @@ install.packages("psych") # if not already installed
 devtools::install_github("SharonLutz/UCMRS")
 ```
 ## Input
+For n subjects (input n), we generated the SNP g and the unmeasured confounder u from normal distributions with user specified means and variances (input gMu,gVar,uMu,uVar). x and y are generated such that
+
+E\[X \] = &alpha;<sub>1</sub> +  &beta;<sub>g</sub> g + &Sigma; &beta;<sub>U1</sub> U;<sub>1</sub> + &epsilon;<sub>1</sub>
+E\[Y \] = &alpha;<sub>2</sub> +  &beta;<sub>X</sub> X<sub>true</sub> + &Sigma; &beta;<sub>G</sub> G
+
+from equation 1 such that the intercepts equal 0 (i.e. α_1=0 and α_2=0), the genetic effect size, βg=1, and the effect of x on y, βx=1. The random errors ϵ_1 and ϵ_2 are generated from standard normal distributions. We considered βu1= -5 and vary βu2 from 0 to 12.
+
+results<-UCMRS(nSim = 100, n = 1e+05, gMu = 0, gVar = 1, uMu = 0, uVar = 1, 
+      alpha1 = 0, betaG = 1, betaU1 = -5, epsilon1Mu = 0, epsilon1Var = 1, 
+      alpha2 = 0, betaX = 1, betaU2 = c(0,1,10,11), epsilon2Mu = 0, epsilon2Var = 1, 
+      seedVal = 100, alpha = 0.05)
+      
 Let g denote the SNP, x denote phenotype 1, y denote phenotype 2, and u denote an unmeasured confounder of the association between both phenotypes. Then, x and y can be modeled as follows
 
 First, the SNPs are generated from a binomial distribution for n subjects (input n) for a given vector of minor allele frequencies (input MAF).
@@ -62,20 +74,10 @@ E\[Y \] = 0 + &beta;<sub>X</sub> X
 ```
 library(UCMRS)
 ?UCMRS
-results<-UCMRS(nSim = 50, n = 1e+05, gMu = 0, gVar = 1, uMu = 0, uVar = 1, 
+results<-UCMRS(nSim = 100, n = 1e+05, gMu = 0, gVar = 1, uMu = 0, uVar = 1, 
       alpha1 = 0, betaG = 1, betaU1 = -5, epsilon1Mu = 0, epsilon1Var = 1, 
       alpha2 = 0, betaX = 1, betaU2 = c(0,1,10,11), epsilon2Mu = 0, epsilon2Var = 1, 
       seedVal = 100, alpha = 0.05)
-
-
-library(reverseDirection)
-
-results<-reverseDirection(nSim = 1000, n = 100, MAF = 0.5, 
-gamma0 = 0, gammaG = 1, varX = 1, 
-measurementError = F,  
-beta0 = 0, betaX = c(seq(from = 0, to = 0.5, by=0.1),seq(from = 0.75, to = 2, by=0.25)), 
-pleiotropy = F, unmeasuredConfounding=F, varY = 0.2, sig.level = 0.05, 
-SEED = 1, plot.pdf = T, plot.name = "ReverseDirection")
 
 
 round(results$matrix,2)
