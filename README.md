@@ -1,5 +1,5 @@
 # UCMRS
-Unmeasured confounding in the MR Steiger approach
+Examing the role of unmeasured confounding in the MR Steiger approach
 
 ## Installation
 ```
@@ -9,6 +9,7 @@ install.packages("psych") # if not already installed
 devtools::install_github("SharonLutz/UCMRS")
 ```
 ## Example
+For this example,
 ```
 library(UCMRS)
 ?UCMRS
