@@ -68,5 +68,7 @@ if(abs(cor(X,G))<abs(cor(Y,G))){res[bb,"cwd"]<-res[bb,"cwd"]+1}
 res[,2:ncol(res)]<-res[,2:ncol(res)]/nSim
 
 ##################
-list(res)
+listM<-list(res)
+    names(listM)<-c("matrix")
+   listM 
 }
