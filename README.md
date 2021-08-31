@@ -22,7 +22,7 @@ where the intercepts (input alpha1 and alpha2), the genetic effect size (input b
 This function outputs the percent of simulations where the cor(g,x)<cor(g,y) and the incorrect direction is detected between X and Y using the MR Steiger approach. 
 
 ## Example:
-Consider an example with 10000 subjects (input n=1e+05), the SNP g, the unmeasured confounder u, and the random errors  &epsilon;<sub>1</sub> and &epsilon;<sub>2</sub> are generated from standard normal distributions. x and y are generated from the equations above such that the intercepts equal 0 (i.e. &alpha;<sub>1</sub>=0 and &alpha;<sub>2</sub>=0), the genetic effect size, &beta;<sub>g</sub>=1, and the effect of x on y, &beta;<sub>x</sub>=1. Consider &beta;<sub>U1</sub>= -5 and vary &beta;<sub>U1<2sub> from 0 to 11. The code to run this example is as follows.
+Consider an example with 10000 subjects (input n=1e+05), the SNP g, the unmeasured confounder u, and the random errors  &epsilon;<sub>1</sub> and &epsilon;<sub>2</sub> are generated from standard normal distributions. x and y are generated from the equations above such that the intercepts equal 0 (i.e. &alpha;<sub>1</sub>=0 and &alpha;<sub>2</sub>=0), the genetic effect size, &beta;<sub>g</sub>=1, and the effect of x on y, &beta;<sub>x</sub>=1. Consider &beta;<sub>U1</sub>= -5 and vary &beta;<sub>U2<sub> from 0 to 11. The code to run this example is as follows.
 
 ```
 library(UCMRS)
