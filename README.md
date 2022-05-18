@@ -43,3 +43,6 @@ The function outputs the following matrix. As seen below, there is a range from 
 [4,]     10             0              0.32     0.15 0.15
 [5,]     11             0              0.00     0.00 0.00
 ```
+## Reference:
+
+Lutz SM, Voorhies K, Wu AC, Hokanson J, Vansteelandt S, Lange C. The influence of unmeasured confounding on the MR Steiger approach. Genet Epidemiol. 2022 Mar;46(2):139-141. PMID:35170805; PMCID:PMC8915443.
