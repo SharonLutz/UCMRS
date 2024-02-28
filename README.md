@@ -1,5 +1,5 @@
 # UCMRS
-Simulation of the general performance of the MR Steiger approach under unmeasured confounding. 
+Simulation studies of the general performance of the MR Steiger approach under unmeasured confounding. 
 
 ## Installation
 ```
