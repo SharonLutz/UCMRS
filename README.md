@@ -34,7 +34,7 @@ results<-UCMRS(nSim = 100, n = 1e+05, gMu = 0, gVar = 1, uMu = 0, uVar = 1,
 results$matrix
 ```
 
-The function outputs the following matrix. As seen below, there is a range from about 1 to 9 where the unmeasured confounder u results in the wrong causal direction being detected.
+The function outputs the following matrix. 
 ```
      betaU2 var(x)>var(y) cor(g,x)<cor(g,y) WrongDir  cwd
 [1,]      0             0              0.00     0.00 0.00
