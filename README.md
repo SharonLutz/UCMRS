@@ -1,5 +1,5 @@
 # UCMRS
-Examining the role of unmeasured confounding in the MR Steiger approach
+Simulation of the general performance of the MR Steiger approach under unmeasured confounding. 
 
 ## Installation
 ```
